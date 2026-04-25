@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Luyal SMP</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,16 +18,17 @@
 </nav>
 
 <section class="hero fade-in">
-  <h1>Welcome to Luyal SMP</h1>
-  <p>Survive. Build. Thrive.</p>
-  <button onclick="copyIP()">Play Now</button>
+  <h1>Luyal SMP</h1>
+  <p>Survive • Build • Thrive</p>
+  <button class="btn copy" onclick="copyIP()">Copy IP</button>
 </section>
 
-<section class="status-card fade-in">
+<div class="card fade-in">
   <h2>Server Status</h2>
   <p id="status">Checking...</p>
   <p id="players"></p>
-</section>
+  <a class="btn discord" href="https://discord.gg/XmeDRH3hdk" target="_blank">Join Discord</a>
+</div>
 
 <script src="script.js"></script>
 </body>
