@@ -1,23 +1,35 @@
 body {
   margin: 0;
-  font-family: Arial;
-  background: #081c15;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #0f2a1d, #020617);
   color: white;
+  overflow-x: hidden;
 }
 
+/* NAV */
 nav {
   display: flex;
   justify-content: space-between;
   padding: 15px 30px;
-  background: #0b2e1e;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
 }
 
 nav a {
   margin: 0 10px;
   color: #22c55e;
   text-decoration: none;
+  transition: 0.3s;
 }
 
+nav a:hover {
+  color: white;
+  text-shadow: 0 0 10px #22c55e;
+}
+
+/* HERO */
 .hero {
   text-align: center;
   padding: 120px 20px;
@@ -25,24 +37,53 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 55px;
   color: #22c55e;
+  text-shadow: 0 0 20px #22c55e;
 }
 
-button {
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 0 30px rgba(0,255,150,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
   padding: 12px 20px;
-  background: #22c55e;
-  border: none;
   border-radius: 10px;
-  cursor: pointer;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.status-card {
-  text-align: center;
-  padding: 50px;
+.discord {
+  background: #5865F2;
+  color: white;
 }
 
-/* animations */
+.copy {
+  background: #22c55e;
+  color: black;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* ANIMATION */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -55,21 +96,11 @@ button {
     transform: translateY(0);
   }
 }
-.page {
-  text-align: center;
-  padding: 80px 20px;
-}
 
-.card {
-  background: #0b2e1e;
-  padding: 25px;
-  border-radius: 15px;
-  max-width: 500px;
-  margin: auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-ul {
-  text-align: left;
-  line-height: 1.8;
+/* PARTICLES */
+#particles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
