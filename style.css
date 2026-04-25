@@ -55,3 +55,21 @@ button {
     transform: translateY(0);
   }
 }
+.page {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.card {
+  background: #0b2e1e;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+ul {
+  text-align: left;
+  line-height: 1.8;
+}
