@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Luyal SMP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <h2> Luyal SMP</h2>
+  <h2>🌿 Luyal SMP</h2>
   <div>
     <a href="index.html">Home</a>
     <a href="staff.html">Staff</a>
@@ -17,28 +21,67 @@
   </div>
 </nav>
 
-<section class="hero fade-in">
+<!-- HERO -->
+<section class="hero reveal">
   <h1>Luyal SMP</h1>
-  <p>Survive • Build • Thrive</p>
-  <button class="btn copy" onclick="copyIP()">Copy IP</button>
+  <p>The next-gen Bedrock survival experience</p>
+
+  <div>
+    <button class="btn copy" onclick="copyIP()">Play Now</button>
+    <a class="btn discord" href="https://discord.gg/XmeDRH3hdk" target="_blank">
+      Join Discord
+    </a>
+  </div>
 </section>
 
+<!-- STATUS -->
 <div class="card reveal">
-  <h2>Why Play Luyal SMP?</h2>
-  <ul>
-    <li>🌍 Active survival world</li>
-    <li>⚔️ Fair gameplay</li>
-    <li>👥 Friendly community</li>
-    <li>🚀 Constant updates</li>
-  </ul>
-</div>
-  
-<div class="card fade-in">
-  <h2>Server Status</h2>
+  <h2>🎮 Server Status</h2>
   <p id="status">Checking...</p>
   <p id="players"></p>
-  <a class="btn discord" href="https://discord.gg/XmeDRH3hdk" target="_blank">Join Discord</a>
 </div>
+
+<!-- FEATURES -->
+<section class="reveal" style="text-align:center; padding:60px 20px;">
+  <h2>🚀 Why Join Luyal SMP?</h2>
+
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:30px;">
+    
+    <div class="card">
+      <h3>🌍 Survival World</h3>
+      <p>Explore a persistent multiplayer world</p>
+    </div>
+
+    <div class="card">
+      <h3>⚔️ Fair Gameplay</h3>
+      <p>No pay-to-win mechanics</p>
+    </div>
+
+    <div class="card">
+      <h3>👥 Community</h3>
+      <p>Friendly and active players</p>
+    </div>
+
+    <div class="card">
+      <h3>🔄 Updates</h3>
+      <p>Constant improvements and events</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="reveal" style="text-align:center; padding:80px 20px;">
+  <h2>Ready to Join?</h2>
+  <p>Jump into Luyal SMP today</p>
+
+  <button class="btn copy" onclick="copyIP()">Copy Server IP</button>
+</section>
+
+<!-- FOOTER -->
+<footer style="text-align:center; padding:30px; color:#6b7280;">
+  © 2026 Luyal SMP • ALL RIGHTS PRESERVED
+</footer>
 
 <script src="script.js"></script>
 </body>
