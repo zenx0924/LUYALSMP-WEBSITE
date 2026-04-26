@@ -1,13 +1,12 @@
-/* RESET */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #02140d, #020617);
+  background: radial-gradient(circle at top, #02140d, #020617);
   color: white;
   overflow-x: hidden;
 }
 
-/* NAVBAR */
+/* NAV */
 nav {
   display: flex;
   justify-content: space-between;
@@ -16,12 +15,7 @@ nav {
   top: 0;
   backdrop-filter: blur(12px);
   background: rgba(0,0,0,0.4);
-  border-bottom: 1px solid rgba(34,197,94,0.2);
-}
-
-nav h2 {
-  color: #22c55e;
-  letter-spacing: 1px;
+  z-index: 100;
 }
 
 nav a {
@@ -29,33 +23,20 @@ nav a {
   text-decoration: none;
   color: #22c55e;
   transition: 0.3s;
-  position: relative;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background: #22c55e;
-  transition: 0.3s;
-}
-
-nav a:hover::after {
-  width: 100%;
+nav a:hover {
+  text-shadow: 0 0 10px #22c55e;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 140px 20px;
-  animation: fadeUp 1s ease;
+  padding: 150px 20px;
 }
 
 .hero h1 {
-  font-size: 60px;
+  font-size: 65px;
   background: linear-gradient(90deg, #22c55e, #4ade80);
   -webkit-background-clip: text;
   color: transparent;
@@ -63,28 +44,26 @@ nav a:hover::after {
 
 .hero p {
   color: #9ca3af;
-  font-size: 18px;
 }
 
 /* BUTTON */
 .btn {
-  display: inline-block;
   padding: 12px 22px;
   border-radius: 12px;
-  margin-top: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+  border: none;
   cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
 }
 
 .copy {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
+  background: #22c55e;
   color: black;
 }
 
 .discord {
   background: #5865F2;
+  color: white;
 }
 
 .btn:hover {
@@ -92,56 +71,50 @@ nav a:hover::after {
   box-shadow: 0 0 20px rgba(34,197,94,0.5);
 }
 
-/* CARD (GLASS STYLE) */
+/* CARD */
 .card {
-  margin: 40px auto;
-  max-width: 520px;
+  margin: 50px auto;
+  max-width: 550px;
   padding: 30px;
   border-radius: 20px;
   background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(20px);
   border: 1px solid rgba(34,197,94,0.2);
-  box-shadow: 0 0 40px rgba(34,197,94,0.15);
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.02);
 }
 
-/* TEXT */
-h1, h2 {
-  margin-bottom: 10px;
-}
-
-ul {
-  text-align: left;
-  line-height: 1.8;
-  padding-left: 20px;
-}
-
-/* ANIMATION */
-.fade-in {
+/* SCROLL ANIMATION */
+.reveal {
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s forwards;
+  transform: translateY(40px);
+  transition: 1s;
 }
 
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* GLOW BACKGROUND EFFECT */
-body::before {
-  content: "";
+/* CURSOR GLOW */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   position: fixed;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(34,197,94,0.2), transparent);
-  top: -100px;
-  left: -100px;
+  background: rgba(34,197,94,0.6);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+/* BACKGROUND PARTICLES */
+#particles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
   z-index: -1;
 }
